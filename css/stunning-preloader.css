@@ -15,6 +15,11 @@
     z-index: 9999;
     overflow: hidden;
     transition: opacity 1.5s ease;
+
+    /* GPU ACCELERATION */
+    will-change: opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 #stunning-preloader.active {
@@ -33,6 +38,10 @@
     width: 100%;
     height: 100%;
     z-index: 1;
+
+    /* GPU ACCELERATION */
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 .preloader-video-bg video {
@@ -40,6 +49,11 @@
     height: 100%;
     object-fit: cover;
     filter: hue-rotate(270deg) saturate(1.5) brightness(0.8);
+
+    /* PERFORMANCE OPTIMIZATION */
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 /* Gradient Overlay for Depth */
@@ -56,7 +70,7 @@
     z-index: 2;
 }
 
-/* Animated Light Rays */
+/* Animated Light Rays - OPTIMIZED */
 .preloader-light-rays {
     position: absolute;
     top: 50%;
@@ -66,6 +80,10 @@
     transform: translate(-50%, -50%);
     z-index: 3;
     pointer-events: none;
+
+    /* GPU ACCELERATION */
+    will-change: transform;
+    transform: translate(-50%, -50%) translateZ(0);
 }
 
 .preloader-ray {
@@ -74,10 +92,14 @@
     left: 50%;
     width: 2px;
     height: 300px;
-    background: linear-gradient(to bottom, rgba(183, 148, 246, 0.8), transparent);
+    background: linear-gradient(to bottom, rgba(183, 148, 246, 0.6), transparent);
     transform-origin: bottom center;
     animation: rayRotate 8s linear infinite;
-    opacity: 0.3;
+    opacity: 0.2;
+
+    /* GPU ACCELERATION */
+    will-change: transform, opacity;
+    backface-visibility: hidden;
 }
 
 .preloader-ray:nth-child(1) {
@@ -181,12 +203,16 @@
     transition: opacity 0.5s ease;
 }
 
-/* Hexagonal Loader with Glow */
+/* Hexagonal Loader with Glow - OPTIMIZED */
 .hex-loader {
     position: relative;
     width: 150px;
     height: 150px;
     margin-bottom: 50px;
+
+    /* GPU ACCELERATION */
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 .hex-ring {
@@ -195,6 +221,10 @@
     height: 100%;
     border: 2px solid transparent;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+    /* GPU ACCELERATION */
+    will-change: transform, opacity;
+    backface-visibility: hidden;
 }
 
 .hex-ring-1 {

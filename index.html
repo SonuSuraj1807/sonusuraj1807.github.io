@@ -96,12 +96,8 @@
     <!-- Gradient Overlay -->
     <div class="preloader-gradient-overlay"></div>
 
-    <!-- Light Rays -->
+    <!-- Light Rays - OPTIMIZED (reduced from 8 to 4) -->
     <div class="preloader-light-rays">
-      <div class="preloader-ray"></div>
-      <div class="preloader-ray"></div>
-      <div class="preloader-ray"></div>
-      <div class="preloader-ray"></div>
       <div class="preloader-ray"></div>
       <div class="preloader-ray"></div>
       <div class="preloader-ray"></div>
@@ -147,87 +143,6 @@
       <p>TO MY PORTFOLIO</p>
     </div>
   </div>
-
-  <style>
-    /* Performance optimizations */
-    .intro-video-bg video,
-    .preloader-video-bg video {
-      will-change: transform;
-      backface-visibility: hidden;
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Twinkle animation for stars */
-    @keyframes twinkle {
-
-      0%,
-      100% {
-        opacity: 0.3;
-        transform: scale(1);
-      }
-
-      50% {
-        opacity: 1;
-        transform: scale(1.5);
-      }
-    }
-
-    /* Hide main content while loading */
-    body.loading main,
-    body.loading .side-nav,
-    body.loading #theme-toggle,
-    body.loading #back-to-top,
-    body.loading .whatsapp-float {
-      visibility: hidden;
-      opacity: 0;
-    }
-
-    /* Ensure intro screen is on top */
-    #intro-screen {
-      z-index: 10000 !important;
-    }
-
-    /* Ensure preloader is below intro but above everything else */
-    #stunning-preloader {
-      z-index: 9999 !important;
-    }
-
-    /* Hidden class for elements that fade in later */
-    .hidden {
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    /* Pop-in animation for social icons and tags */
-    .pop-in {
-      animation: popIn 0.4s ease forwards;
-    }
-
-    @keyframes popIn {
-      from {
-        opacity: 0;
-        transform: scale(0.8) translateY(10px);
-      }
-
-      to {
-        opacity: 1;
-        visibility: visible;
-        transform: scale(1) translateY(0);
-      }
-    }
-  </style>
 
   <!-- THEME TOGGLE -->
   <button id="theme-toggle" title="Toggle theme">☾</button>
@@ -328,47 +243,8 @@
       <div class="container education-wrapper">
         <h2 class="section-title">Education</h2>
 
-        <div class="timeline">
-
-          <!-- ITEM 1 -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content edu-card">
-              <h3>Secondary School (10th)</h3>
-              <span>2020 – 2021</span>
-              <p>At Ekashila Public School, Jangaon, Telangana – 506167.</p>
-              <p><strong>CGPA:</strong> 9.8 / 10</p>
-            </div>
-          </div>
-
-          <!-- ITEM 2 -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content edu-card">
-              <h3>Higher Secondary (12th)</h3>
-              <span>2021 – 2023</span>
-              <p>At Nano Junior College, Hyderabad, Telangana – 500030.</p>
-            </div>
-          </div>
-
-          <!-- ITEM 3 -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content edu-card">
-              <h3>B.Tech – Data Science</h3>
-              <span>2023 – Present</span>
-              <p>
-                Pursuing undergraduate studies in Data Science at Vignana Bharathi Institute
-                of Technology with a strong focus on analytics, machine learning, and
-                real-world applications.
-              </p>
-              <p><strong>Current CGPA:</strong> 7.8 / 10</p>
-            </div>
-          </div>
-
-          <!-- Decorative END cap -->
-          <div class="timeline-end-cap"></div>
-
+        <div class="timeline" id="education-container">
+          <!-- Dynamic Education Items injected here -->
         </div>
       </div>
     </section>
@@ -378,92 +254,8 @@
       <div class="container">
         <h2 class="section-title">Projects</h2>
 
-        <div class="projects-grid">
-
-          <!-- PROJECT 1 -->
-          <div class="project-card fade-up">
-
-            <div class="project-image">
-              <img src="images/project1.png" alt="Diet Plan Generator AI Project" loading="lazy">
-            </div>
-
-            <h3>Diet Plan Generator</h3>
-
-            <p>
-              An AI-based system that generates personalized diet plans based on age,
-              gender, and lifestyle.
-            </p>
-
-            <div class="tags">
-              <span>Python</span>
-              <span>LLM</span>
-              <span>AI</span>
-            </div>
-
-            <div class="project-links">
-              <a href="https://github.com/SonuSuraj1807/Diet-plan-Generator" target="_blank">
-                <i class="fab fa-github"></i> GitHub
-              </a>
-            </div>
-
-          </div>
-
-          <!-- PROJECT 2 -->
-          <div class="project-card fade-up">
-
-            <div class="project-image">
-              <img src="images/project2.png" alt="Brain Tumor Detection Machine Learning Project" loading="lazy">
-            </div>
-
-            <h3>Brain Tumor Detection Using X-Ray Images</h3>
-
-            <p>
-              A machine learning model to identify brain tumors from X-ray images using
-              computer vision techniques.
-            </p>
-
-            <div class="tags">
-              <span>Python</span>
-              <span>Computer Vision</span>
-              <span>ML</span>
-            </div>
-
-            <div class="project-links">
-              <a href="https://github.com/SonuSuraj1807/Identifying-brain-tumors-using-x-ray-images" target="_blank">
-                <i class="fab fa-github"></i> GitHub
-              </a>
-            </div>
-
-          </div>
-
-          <!-- PROJECT 3 -->
-          <div class="project-card fade-up">
-
-            <div class="project-image">
-              <img src="images/project3.png" alt="Automated Online Ordering GenAI Project" loading="lazy">
-            </div>
-
-            <h3>Automated Online Ordering System using GenAI</h3>
-
-            <p>
-              A GenAI-powered system that automates online product ordering by
-              understanding user inputs and generating responses.
-            </p>
-
-            <div class="tags">
-              <span>Python</span>
-              <span>GenAI</span>
-              <span>NLP</span>
-            </div>
-
-            <div class="project-links">
-              <a href="https://github.com/SonuSuraj1807/Automated-online-ordering-system-using-GenAI" target="_blank">
-                <i class="fab fa-github"></i> GitHub
-              </a>
-            </div>
-
-          </div>
-
+        <div class="projects-grid" id="projects-container">
+          <!-- Dynamic Projects injected here -->
         </div>
 
 
@@ -477,56 +269,8 @@
       <div class="container">
         <h2 class="section-title">Skills</h2>
 
-        <div class="skills-list">
-
-          <div class="skill-item">
-            <div class="skill-header">
-              <i class="fab fa-python" style="color: #3776AB; margin-right: 8px;"></i>
-              <span class="skill-name">Python</span>
-            </div>
-            <div class="bar">
-              <span data-level="90%">
-                <em>Expert</em>
-              </span>
-            </div>
-          </div>
-
-          <div class="skill-item">
-            <div class="skill-header">
-              <i class="fab fa-html5" style="color: #E34F26; margin-right: 8px;"></i>
-              <span class="skill-name">HTML</span>
-            </div>
-            <div class="bar">
-              <span data-level="85%">
-                <em>Advanced</em>
-              </span>
-            </div>
-          </div>
-
-          <div class="skill-item">
-            <div class="skill-header">
-              <i class="fas fa-code" style="color: #A8B9CC; margin-right: 8px;"></i>
-              <span class="skill-name">C</span>
-            </div>
-            <div class="bar">
-              <span data-level="80%">
-                <em>Advanced</em>
-              </span>
-            </div>
-          </div>
-
-          <div class="skill-item">
-            <div class="skill-header">
-              <i class="fab fa-js-square" style="color: #F7DF1E; margin-right: 8px;"></i>
-              <span class="skill-name">JavaScript</span>
-            </div>
-            <div class="bar">
-              <span data-level="70%">
-                <em>Intermediate</em>
-              </span>
-            </div>
-          </div>
-
+        <div class="skills-list" id="skills-container">
+          <!-- Dynamic Skills injected here -->
         </div>
       </div>
     </section>
@@ -536,83 +280,8 @@
       <div class="container">
         <h2 class="section-title">Internships</h2>
 
-        <div class="internship-wrapper">
-
-          <!-- ANDROID INTERNSHIP -->
-          <div class="intern-card">
-            <h3>
-              Virtual Internship: Android Developer
-              <span class="intern-icons">
-                <i class="fab fa-google" title="Google for Developers"></i>
-              </span>
-            </h3>
-
-            <p class="company">
-              AICTE – EduSkills
-            </p>
-
-            <span class="duration">
-              April 2024 – June 2024 (10 Weeks)
-            </span>
-
-            <p class="desc">
-              Completed a virtual internship as an Android Developer under AICTE – EduSkills,
-              supported by Google for Developers. Gained hands-on exposure to Android
-              application development, UI design, activity lifecycle management,
-              and modern mobile development practices.
-            </p>
-          </div>
-
-          <!-- DATA ENGINEERING INTERNSHIP -->
-          <div class="intern-card">
-            <h3>
-              Virtual Internship: Data Engineering
-              <span class="intern-icons">
-                <i class="fab fa-aws" title="AWS Academy"></i>
-              </span>
-            </h3>
-
-            <p class="company">
-              AICTE – EduSkills
-            </p>
-
-            <span class="duration">
-              January 2025 – March 2025 (10 Weeks)
-            </span>
-
-            <p class="desc">
-              Completed a virtual internship in Data Engineering under AICTE – EduSkills,
-              supported by AWS Academy. Acquired practical knowledge in data pipelines,
-              cloud-based data services, ETL processes, and foundational data
-              engineering concepts using AWS tools.
-            </p>
-          </div>
-          <!-- ALTAIR DATA SCIENCE MASTER INTERNSHIP -->
-          <div class="intern-card">
-            <h3>
-              Virtual Internship: Altair Data Science Master
-              <span class="intern-icons">
-                <i class="fab fa-altair" title="Altair"></i>
-              </span>
-            </h3>
-
-            <p class="company">
-              AICTE – EduSkills
-            </p>
-
-            <span class="duration">
-              January 2025 – March 2025 (10 Weeks)
-            </span>
-
-            <p class="desc">
-              Completed a virtual internship in Altair Data Science Master under AICTE – EduSkills,
-              supported by Altair. Acquired practical knowledge in data pipelines,
-              cloud-based data services, ETL processes, and foundational data
-              engineering concepts using AWS tools.
-            </p>
-          </div>
-
-
+        <div class="internship-wrapper" id="internships-container">
+          <!-- Dynamic Internships injected here -->
         </div>
       </div>
     </section>
@@ -622,56 +291,8 @@
       <div class="container">
         <h2 class="section-title">Certifications</h2>
 
-        <div class="cert-grid">
-
-          <!-- CERT 1 -->
-          <div class="cert-card fade-up">
-            <h3>Virtual Internship: Android Developer</h3>
-            <p class="issuer">AICTE · EduSkills | Supported by Google for Developers</p>
-
-            <div class="cert-actions">
-              <button class="view-cert" data-pdf="certificates/android_internship.pdf">
-                View Certificate
-              </button>
-
-              <a class="download-cert" href="certificates/android_internship.pdf" download>
-                Download
-              </a>
-            </div>
-          </div>
-
-          <!-- CERT 2 -->
-          <div class="cert-card fade-up">
-            <h3>Virtual Internship: AWS Data Engineering</h3>
-            <p class="issuer">AICTE · EduSkills | Supported by AWS Academy</p>
-
-            <div class="cert-actions">
-              <button class="view-cert" data-pdf="certificates/aws_data_engineering.pdf">
-                View Certificate
-              </button>
-
-              <a class="download-cert" href="certificates/aws_data_engineering.pdf" download>
-                Download
-              </a>
-            </div>
-          </div>
-
-          <!-- CERT 3 -->
-          <div class="cert-card fade-up">
-            <h3>Virtual Internship: Altair Data Science Master</h3>
-            <p class="issuer">AICTE · EduSkills | Supported by Altair</p>
-
-            <div class="cert-actions">
-              <button class="view-cert" data-pdf="certificates/altair_internship.pdf">
-                View Certificate
-              </button>
-
-              <a class="download-cert" href="certificates/altair_internship.pdf" download>
-                Download
-              </a>
-            </div>
-          </div>
-
+        <div class="cert-grid" id="certifications-container">
+          <!-- Dynamic Certifications injected here -->
         </div>
       </div>
     </section>
@@ -732,6 +353,33 @@
 
   </main>
 
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-logo">
+        <h2>Suraj Rao</h2>
+        <p>Building digital experiences with passion & precision.</p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/SonuSuraj1807" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/suraj-rao" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:surajrao@example.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Suraj Rao. All rights reserved.</p>
+        <p class="built-with">Built with <i class="fas fa-heart"></i> & Code</p>
+      </div>
+    </div>
+  </footer>
+
   <!-- WHATSAPP FLOAT -->
   <a href="https://wa.me/918790172500?text=Hi%20Suraj,%20I%20saw%20your%20portfolio" class="whatsapp-float"
     target="_blank" data-tooltip="Chat on WhatsApp">
@@ -744,7 +392,11 @@
   </button>
 
 
+  <script src="js/three.min.js"></script>
+  <script src="js/vanta.net.min.js"></script>
+  <script src="js/vanta_init.js"></script>
   <script src="js/video-preloader.js"></script>
+  <script src="js/data.js"></script>
   <script src="js/script.js"></script>
 
 </body>

@@ -13,10 +13,15 @@
 
   console.log('Elements found:', { introScreen, viewPortfolioBtn, stunningPreloader });
 
-  // Create sparkle particles
+  // Create sparkle particles - OPTIMIZED
   function createSparkles() {
     if (!preloaderSparkles) return;
-    for (let i = 0; i < 40; i++) {
+
+    // Use DocumentFragment for better performance
+    const fragment = document.createDocumentFragment();
+
+    // Reduced from 40 to 20 for better performance
+    for (let i = 0; i < 20; i++) {
       const sparkle = document.createElement('div');
       sparkle.className = 'preloader-sparkle';
       sparkle.style.left = Math.random() * 100 + '%';
@@ -25,8 +30,16 @@
       sparkle.style.animationDuration = (Math.random() * 1 + 1.5) + 's';
       sparkle.style.width = (Math.random() * 3 + 2) + 'px';
       sparkle.style.height = sparkle.style.width;
-      preloaderSparkles.appendChild(sparkle);
+
+      // GPU acceleration hint
+      sparkle.style.willChange = 'transform, opacity';
+      sparkle.style.transform = 'translateZ(0)';
+
+      fragment.appendChild(sparkle);
     }
+
+    // Single DOM insertion instead of 20
+    preloaderSparkles.appendChild(fragment);
   }
 
   // Function to reveal portfolio after preloader
