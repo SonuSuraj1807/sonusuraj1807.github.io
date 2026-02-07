@@ -1,0 +1,486 @@
+/* ======================================================
+   INTRO LANDING SCREEN - PREMIUM UI
+====================================================== */
+
+/* Import Parfumerie Script font */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+#intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+#intro-screen.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Plexus Video Background */
+.intro-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.intro-video-bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dark overlay for text readability */
+.intro-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: 2;
+}
+
+/* Hide old animated background */
+#intro-screen::before {
+    display: none;
+}
+
+/* Animated Background Gradient */
+#intro-screen::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 30%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+    animation: gradientMove 15s ease-in-out infinite;
+}
+
+@keyframes gradientMove {
+
+    0%,
+    100% {
+        transform: translate(-10%, -10%) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(10%, 10%) rotate(180deg);
+    }
+}
+
+/* Floating Orbs */
+.intro-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    animation: orbFloat 8s ease-in-out infinite;
+}
+
+.orb-1 {
+    width: 300px;
+    height: 300px;
+    background: rgba(168, 85, 247, 0.3);
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.orb-2 {
+    width: 250px;
+    height: 250px;
+    background: rgba(59, 130, 246, 0.25);
+    bottom: 15%;
+    right: 15%;
+    animation-delay: -3s;
+}
+
+.orb-3 {
+    width: 200px;
+    height: 200px;
+    background: rgba(236, 72, 153, 0.2);
+    top: 50%;
+    right: 10%;
+    animation-delay: -5s;
+}
+
+@keyframes orbFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-30px) scale(1.1);
+    }
+}
+
+/* Floating Particles */
+.intro-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.intro-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: particleRise 10s linear infinite;
+}
+
+@keyframes particleRise {
+    0% {
+        opacity: 0;
+        transform: translateY(100vh) scale(0);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-100vh) scale(1);
+    }
+}
+
+/* Decorative Lines */
+.intro-lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.intro-line {
+    position: absolute;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.5), transparent);
+    animation: lineGlow 4s ease-in-out infinite;
+}
+
+.line-1 {
+    top: 20%;
+    width: 30%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.line-2 {
+    top: 80%;
+    width: 25%;
+    right: 5%;
+    animation-delay: -1s;
+}
+
+.line-3 {
+    top: 40%;
+    width: 20%;
+    right: 15%;
+    animation-delay: -2s;
+}
+
+@keyframes lineGlow {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scaleX(0.8);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scaleX(1);
+    }
+}
+
+/* Corner Decorations */
+.intro-corner {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    pointer-events: none;
+}
+
+.corner-tl {
+    top: 30px;
+    left: 30px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.corner-tr {
+    top: 30px;
+    right: 30px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.corner-bl {
+    bottom: 30px;
+    left: 30px;
+    border-right: none;
+    border-top: none;
+}
+
+.corner-br {
+    bottom: 30px;
+    right: 30px;
+    border-left: none;
+    border-top: none;
+}
+
+/* Main Content Container */
+.intro-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Decorative Title Stars */
+.intro-stars {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.intro-star {
+    width: 8px;
+    height: 8px;
+    background: rgba(168, 85, 247, 0.8);
+    transform: rotate(45deg);
+    animation: starPulse 2s ease-in-out infinite;
+}
+
+.intro-star:nth-child(2) {
+    animation-delay: -0.5s;
+    width: 6px;
+    height: 6px;
+}
+
+.intro-star:nth-child(4) {
+    animation-delay: -1s;
+    width: 6px;
+    height: 6px;
+}
+
+@keyframes starPulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: rotate(45deg) scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: rotate(45deg) scale(1.3);
+    }
+}
+
+/* Subtitle */
+.intro-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+/* Main Title */
+.intro-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4.5rem;
+    color: #fff;
+    text-shadow: 0 0 40px rgba(168, 85, 247, 0.5),
+        0 0 80px rgba(168, 85, 247, 0.3);
+    margin-bottom: 10px;
+    animation: titleGlow 3s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 40px rgba(168, 85, 247, 0.5), 0 0 80px rgba(168, 85, 247, 0.3);
+    }
+
+    50% {
+        text-shadow: 0 0 60px rgba(168, 85, 247, 0.7), 0 0 100px rgba(168, 85, 247, 0.5);
+    }
+}
+
+/* Tagline */
+.intro-tagline {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+/* View Portfolio Button */
+.view-portfolio-btn {
+    position: relative;
+    padding: 18px 50px;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    background: transparent;
+    border: 2px solid rgba(183, 148, 246, 0.6);
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+    font-weight: 500;
+    z-index: 1;
+}
+
+/* Fill effect layer */
+.view-portfolio-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(183, 148, 246, 0.4), rgba(139, 92, 246, 0.5));
+    transition: width 0.4s ease;
+    z-index: -1;
+}
+
+.view-portfolio-btn:hover::before {
+    width: 100%;
+}
+
+.view-portfolio-btn:hover {
+    border-color: rgba(183, 148, 246, 1);
+    box-shadow: 0 0 30px rgba(183, 148, 246, 0.5),
+        0 0 60px rgba(183, 148, 246, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Button Glow Ring */
+.btn-glow-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 200%;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 50%;
+    animation: ringPulse 2s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes ringPulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.2;
+    }
+}
+
+/* Scroll Indicator */
+.intro-scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    animation: bounceDown 2s ease-in-out infinite;
+}
+
+.scroll-arrow {
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid rgba(168, 85, 247, 0.5);
+    border-bottom: 2px solid rgba(168, 85, 247, 0.5);
+    transform: rotate(45deg);
+}
+
+@keyframes bounceDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .intro-title {
+        font-size: 2.8rem;
+    }
+
+    .intro-subtitle {
+        font-size: 0.7rem;
+        letter-spacing: 5px;
+    }
+
+    .view-portfolio-btn {
+        padding: 14px 35px;
+        font-size: 0.85rem;
+    }
+
+    .intro-corner {
+        width: 50px;
+        height: 50px;
+    }
+
+    .corner-tl,
+    .corner-tr,
+    .corner-bl,
+    .corner-br {
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+    }
+}

@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Suraj Rao | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Suraj Rao's Portfolio - Data Science Student at VBIT. Specialized in Data Analysis, Machine Learning, and AI. Check out my projects, internships, and certifications.">
+  <meta name="keywords" content="Suraj Rao, Data Science, Portfolio, Machine Learning, AI, VBIT, Python, Data Analysis">
+  <meta name="author" content="Suraj Rao">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Suraj Rao | Data Science Student Portfolio">
+  <meta property="og:description"
+    content="Portfolio of Suraj Rao - Data Science Student at VBIT. specialized in ML, AI, and Analytics.">
+  <meta property="og:image" content="images/profile.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/intro-screen.css">
+  <link rel="stylesheet" href="css/stunning-preloader.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="loading">
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="scroll-progress"></div>
+
+  <!-- INTRO LANDING SCREEN -->
+  <div id="intro-screen">
+    <!-- Plexus Video Background -->
+    <div class="intro-video-bg">
+      <video autoplay muted loop playsinline preload="auto">
+        <source src="13495-248644905.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- Dark Overlay -->
+    <div class="intro-video-overlay"></div>
+
+    <!-- Decorative Stars -->
+    <div class="intro-stars" style="position: absolute; width: 100%; height: 100%; z-index: 5; pointer-events: none;">
+      <div class="intro-star"
+        style="position: absolute; width: 4px; height: 4px; background: #fff; border-radius: 50%; box-shadow: 0 0 10px #b794f6; top: 15%; left: 20%; animation: twinkle 3s infinite;">
+      </div>
+      <div class="intro-star"
+        style="position: absolute; width: 4px; height: 4px; background: #fff; border-radius: 50%; box-shadow: 0 0 10px #b794f6; top: 25%; left: 80%; animation: twinkle 3s infinite 0.5s;">
+      </div>
+      <div class="intro-star"
+        style="position: absolute; width: 4px; height: 4px; background: #fff; border-radius: 50%; box-shadow: 0 0 10px #b794f6; top: 60%; left: 10%; animation: twinkle 3s infinite 1s;">
+      </div>
+      <div class="intro-star"
+        style="position: absolute; width: 4px; height: 4px; background: #fff; border-radius: 50%; box-shadow: 0 0 10px #b794f6; top: 70%; left: 85%; animation: twinkle 3s infinite 1.5s;">
+      </div>
+      <div class="intro-star"
+        style="position: absolute; width: 4px; height: 4px; background: #fff; border-radius: 50%; box-shadow: 0 0 10px #b794f6; top: 40%; left: 50%; animation: twinkle 3s infinite 2s;">
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="intro-content" style="position: relative; z-index: 10; text-align: center;">
+      <p class="intro-subtitle"
+        style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.8); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 1rem; animation: fadeInUp 1s ease-out 0.3s forwards; opacity: 0;">
+        Welcome to</p>
+      <h1 class="intro-title"
+        style="font-family: 'Great Vibes', cursive; font-size: 5rem; color: #fff; text-shadow: 0 0 40px rgba(183, 148, 246, 0.8), 0 0 80px rgba(183, 148, 246, 0.4); animation: fadeInUp 1s ease-out 0.5s forwards; opacity: 0;">
+        Suraj Rao's World</h1>
+      <p class="intro-tagline"
+        style="font-size: 1rem; color: rgba(183, 148, 246, 0.9); letter-spacing: 3px; margin-bottom: 3rem; animation: fadeInUp 1s ease-out 0.7s forwards; opacity: 0;">
+        Data Science • Machine Learning • Innovation</p>
+
+      <button class="view-portfolio-btn" id="view-portfolio-btn"
+        style="animation: fadeInUp 1s ease-out 0.9s forwards; opacity: 0;">
+        View My Portfolio
+      </button>
+    </div>
+  </div>
+
+  <!-- STUNNING PRELOADER -->
+  <div id="stunning-preloader">
+    <!-- Plexus Video Background with Purple Tint -->
+    <div class="preloader-video-bg">
+      <video id="preloader-bg-video" autoplay muted loop playsinline>
+        <source src="13495-248644905.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- Gradient Overlay -->
+    <div class="preloader-gradient-overlay"></div>
+
+    <!-- Light Rays -->
+    <div class="preloader-light-rays">
+      <div class="preloader-ray"></div>
+      <div class="preloader-ray"></div>
+      <div class="preloader-ray"></div>
+      <div class="preloader-ray"></div>
+      <div class="preloader-ray"></div>
+      <div class="preloader-ray"></div>
+      <div class="preloader-ray"></div>
+      <div class="preloader-ray"></div>
+    </div>
+
+    <!-- Sparkles -->
+    <div class="preloader-sparkles" id="preloader-sparkles"></div>
+
+    <!-- Main Content -->
+    <div class="preloader-main-content">
+      <!-- Hexagonal Loader -->
+      <div class="hex-loader">
+        <div class="hex-ring hex-ring-1"></div>
+        <div class="hex-ring hex-ring-2"></div>
+        <div class="hex-ring hex-ring-3"></div>
+        <div class="hex-core"></div>
+      </div>
+
+      <!-- Title -->
+      <div class="preloader-title-container">
+        <h1 class="preloader-title">Suraj Rao</h1>
+      </div>
+      <p class="preloader-subtitle">Initializing Experience</p>
+
+      <!-- Progress Bar -->
+      <div class="preloader-progress-wrapper">
+        <div class="preloader-progress-track">
+          <div class="preloader-progress-fill">
+            <div class="preloader-progress-orb"></div>
+          </div>
+        </div>
+        <div class="preloader-loading-text">
+          <span>LOADING</span>
+          <span class="preloader-percent-value" id="preloader-percent">0%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Welcome Message -->
+    <div class="preloader-welcome-message" id="preloader-welcome-message">
+      <h1>Welcome</h1>
+      <p>TO MY PORTFOLIO</p>
+    </div>
+  </div>
+
+  <style>
+    /* Performance optimizations */
+    .intro-video-bg video,
+    .preloader-video-bg video {
+      will-change: transform;
+      backface-visibility: hidden;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Twinkle animation for stars */
+    @keyframes twinkle {
+
+      0%,
+      100% {
+        opacity: 0.3;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.5);
+      }
+    }
+
+    /* Hide main content while loading */
+    body.loading main,
+    body.loading .side-nav,
+    body.loading #theme-toggle,
+    body.loading #back-to-top,
+    body.loading .whatsapp-float {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    /* Ensure intro screen is on top */
+    #intro-screen {
+      z-index: 10000 !important;
+    }
+
+    /* Ensure preloader is below intro but above everything else */
+    #stunning-preloader {
+      z-index: 9999 !important;
+    }
+
+    /* Hidden class for elements that fade in later */
+    .hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    /* Pop-in animation for social icons and tags */
+    .pop-in {
+      animation: popIn 0.4s ease forwards;
+    }
+
+    @keyframes popIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8) translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1) translateY(0);
+      }
+    }
+  </style>
+
+  <!-- THEME TOGGLE -->
+  <button id="theme-toggle" title="Toggle theme">☾</button>
+
+  <!-- SIDE NAV -->
+  <aside class="side-nav">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#internships">Internships</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </aside>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="home" class="section hero">
+      <div class="hero-wrapper">
+
+        <div class="hero-image">
+          <img src="images/profile.png" alt="Suraj Rao - Data Science Student at VBIT" loading="lazy">
+        </div>
+
+        <div class="hero-text">
+          <h1 class="hero-title" id="type-h1"></h1>
+          <h2 class="hero-subtitle" id="type-h2"></h2>
+          <p class="hero-desc" id="type-desc"></p>
+
+          <div class="hero-tags">
+            <span class="hidden fade-after">Data Analysis</span>
+            <span class="hidden fade-after">Machine Learning</span>
+            <span class="hidden fade-after">Problem Solving</span>
+            <span class="hidden fade-after">Web Development</span>
+            <span class="hidden fade-after">AI Enthusiast</span>
+          </div>
+          <p class="connect-label hidden fade-after">Connect with me</p>
+          <!-- SOCIAL BAR -->
+          <div class="social-bar">
+            <a href="https://www.linkedin.com/in/suraj-rao-kommu/" target="_blank" class="hidden fade-after"><i
+                class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/SonuSuraj1807" target="_blank" class="hidden fade-after"><i
+                class="fab fa-github"></i></a>
+            <a href="mailto:sonusuraj1807@gmail.com" class="hidden fade-after"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/918790172500?text=Hi%20Suraj,%20I%20saw%20your%20portfolio" target="_blank"
+              aria-label="WhatsApp" class="whatsapp hidden fade-after"><i class="fab fa-whatsapp"></i></a>
+
+            <a href="https://www.instagram.com/sonu_suraj_" target="_blank" aria-label="Instagram"
+              class="instagram hidden fade-after"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section fade-up">
+      <div class="container">
+
+        <!-- TITLE OUTSIDE CARD -->
+        <h2 class="section-title about-title">Who Am I?</h2>
+
+        <!-- CARD -->
+        <div class="about-card">
+          <p>
+            I am Suraj Rao, a 21-year-old student pursuing a degree in Data Science
+            at Vignana Bharathi Institute of Technology (VBIT). Known for my analytical
+            mindset and passion for technology, I am dedicated to mastering data
+            analysis, machine learning, and artificial intelligence.
+          </p>
+
+          <p>
+            I have distinguished myself through a commitment to academic excellence
+            and active participation in various projects and research initiatives.
+            My coursework and hands-on experience have equipped me with a strong
+            foundation in programming languages such as Python and C, as well as
+            expertise in data visualization, statistical analysis, and predictive
+            modeling.
+          </p>
+
+          <p>
+            Beyond academics, I am an enthusiastic member of the IEEE student branch at VBIT,
+            where I collaborate with peers on innovative projects, participate in
+            hackathons, and engage in continuous learning. My future aspirations
+            include contributing to the field of data science, with a keen interest
+            in big data analytics and its applications in healthcare and finance.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION TIMELINE -->
+    <section id="education" class="section fade-up">
+      <div class="container education-wrapper">
+        <h2 class="section-title">Education</h2>
+
+        <div class="timeline">
+
+          <!-- ITEM 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content edu-card">
+              <h3>Secondary School (10th)</h3>
+              <span>2020 – 2021</span>
+              <p>At Ekashila Public School, Jangaon, Telangana – 506167.</p>
+              <p><strong>CGPA:</strong> 9.8 / 10</p>
+            </div>
+          </div>
+
+          <!-- ITEM 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content edu-card">
+              <h3>Higher Secondary (12th)</h3>
+              <span>2021 – 2023</span>
+              <p>At Nano Junior College, Hyderabad, Telangana – 500030.</p>
+            </div>
+          </div>
+
+          <!-- ITEM 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content edu-card">
+              <h3>B.Tech – Data Science</h3>
+              <span>2023 – Present</span>
+              <p>
+                Pursuing undergraduate studies in Data Science at Vignana Bharathi Institute
+                of Technology with a strong focus on analytics, machine learning, and
+                real-world applications.
+              </p>
+              <p><strong>Current CGPA:</strong> 7.8 / 10</p>
+            </div>
+          </div>
+
+          <!-- Decorative END cap -->
+          <div class="timeline-end-cap"></div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section fade-up">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+
+          <!-- PROJECT 1 -->
+          <div class="project-card fade-up">
+
+            <div class="project-image">
+              <img src="images/project1.png" alt="Diet Plan Generator AI Project" loading="lazy">
+            </div>
+
+            <h3>Diet Plan Generator</h3>
+
+            <p>
+              An AI-based system that generates personalized diet plans based on age,
+              gender, and lifestyle.
+            </p>
+
+            <div class="tags">
+              <span>Python</span>
+              <span>LLM</span>
+              <span>AI</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/SonuSuraj1807/Diet-plan-Generator" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+
+          </div>
+
+          <!-- PROJECT 2 -->
+          <div class="project-card fade-up">
+
+            <div class="project-image">
+              <img src="images/project2.png" alt="Brain Tumor Detection Machine Learning Project" loading="lazy">
+            </div>
+
+            <h3>Brain Tumor Detection Using X-Ray Images</h3>
+
+            <p>
+              A machine learning model to identify brain tumors from X-ray images using
+              computer vision techniques.
+            </p>
+
+            <div class="tags">
+              <span>Python</span>
+              <span>Computer Vision</span>
+              <span>ML</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/SonuSuraj1807/Identifying-brain-tumors-using-x-ray-images" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+
+          </div>
+
+          <!-- PROJECT 3 -->
+          <div class="project-card fade-up">
+
+            <div class="project-image">
+              <img src="images/project3.png" alt="Automated Online Ordering GenAI Project" loading="lazy">
+            </div>
+
+            <h3>Automated Online Ordering System using GenAI</h3>
+
+            <p>
+              A GenAI-powered system that automates online product ordering by
+              understanding user inputs and generating responses.
+            </p>
+
+            <div class="tags">
+              <span>Python</span>
+              <span>GenAI</span>
+              <span>NLP</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/SonuSuraj1807/Automated-online-ordering-system-using-GenAI" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills" class="section fade-up">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills-list">
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <i class="fab fa-python" style="color: #3776AB; margin-right: 8px;"></i>
+              <span class="skill-name">Python</span>
+            </div>
+            <div class="bar">
+              <span data-level="90%">
+                <em>Expert</em>
+              </span>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <i class="fab fa-html5" style="color: #E34F26; margin-right: 8px;"></i>
+              <span class="skill-name">HTML</span>
+            </div>
+            <div class="bar">
+              <span data-level="85%">
+                <em>Advanced</em>
+              </span>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <i class="fas fa-code" style="color: #A8B9CC; margin-right: 8px;"></i>
+              <span class="skill-name">C</span>
+            </div>
+            <div class="bar">
+              <span data-level="80%">
+                <em>Advanced</em>
+              </span>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <i class="fab fa-js-square" style="color: #F7DF1E; margin-right: 8px;"></i>
+              <span class="skill-name">JavaScript</span>
+            </div>
+            <div class="bar">
+              <span data-level="70%">
+                <em>Intermediate</em>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERNSHIPS -->
+    <section id="internships" class="section fade-up">
+      <div class="container">
+        <h2 class="section-title">Internships</h2>
+
+        <div class="internship-wrapper">
+
+          <!-- ANDROID INTERNSHIP -->
+          <div class="intern-card">
+            <h3>
+              Virtual Internship: Android Developer
+              <span class="intern-icons">
+                <i class="fab fa-google" title="Google for Developers"></i>
+              </span>
+            </h3>
+
+            <p class="company">
+              AICTE – EduSkills
+            </p>
+
+            <span class="duration">
+              April 2024 – June 2024 (10 Weeks)
+            </span>
+
+            <p class="desc">
+              Completed a virtual internship as an Android Developer under AICTE – EduSkills,
+              supported by Google for Developers. Gained hands-on exposure to Android
+              application development, UI design, activity lifecycle management,
+              and modern mobile development practices.
+            </p>
+          </div>
+
+          <!-- DATA ENGINEERING INTERNSHIP -->
+          <div class="intern-card">
+            <h3>
+              Virtual Internship: Data Engineering
+              <span class="intern-icons">
+                <i class="fab fa-aws" title="AWS Academy"></i>
+              </span>
+            </h3>
+
+            <p class="company">
+              AICTE – EduSkills
+            </p>
+
+            <span class="duration">
+              January 2025 – March 2025 (10 Weeks)
+            </span>
+
+            <p class="desc">
+              Completed a virtual internship in Data Engineering under AICTE – EduSkills,
+              supported by AWS Academy. Acquired practical knowledge in data pipelines,
+              cloud-based data services, ETL processes, and foundational data
+              engineering concepts using AWS tools.
+            </p>
+          </div>
+          <!-- ALTAIR DATA SCIENCE MASTER INTERNSHIP -->
+          <div class="intern-card">
+            <h3>
+              Virtual Internship: Altair Data Science Master
+              <span class="intern-icons">
+                <i class="fab fa-altair" title="Altair"></i>
+              </span>
+            </h3>
+
+            <p class="company">
+              AICTE – EduSkills
+            </p>
+
+            <span class="duration">
+              January 2025 – March 2025 (10 Weeks)
+            </span>
+
+            <p class="desc">
+              Completed a virtual internship in Altair Data Science Master under AICTE – EduSkills,
+              supported by Altair. Acquired practical knowledge in data pipelines,
+              cloud-based data services, ETL processes, and foundational data
+              engineering concepts using AWS tools.
+            </p>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section fade-up">
+      <div class="container">
+        <h2 class="section-title">Certifications</h2>
+
+        <div class="cert-grid">
+
+          <!-- CERT 1 -->
+          <div class="cert-card fade-up">
+            <h3>Virtual Internship: Android Developer</h3>
+            <p class="issuer">AICTE · EduSkills | Supported by Google for Developers</p>
+
+            <div class="cert-actions">
+              <button class="view-cert" data-pdf="certificates/android_internship.pdf">
+                View Certificate
+              </button>
+
+              <a class="download-cert" href="certificates/android_internship.pdf" download>
+                Download
+              </a>
+            </div>
+          </div>
+
+          <!-- CERT 2 -->
+          <div class="cert-card fade-up">
+            <h3>Virtual Internship: AWS Data Engineering</h3>
+            <p class="issuer">AICTE · EduSkills | Supported by AWS Academy</p>
+
+            <div class="cert-actions">
+              <button class="view-cert" data-pdf="certificates/aws_data_engineering.pdf">
+                View Certificate
+              </button>
+
+              <a class="download-cert" href="certificates/aws_data_engineering.pdf" download>
+                Download
+              </a>
+            </div>
+          </div>
+
+          <!-- CERT 3 -->
+          <div class="cert-card fade-up">
+            <h3>Virtual Internship: Altair Data Science Master</h3>
+            <p class="issuer">AICTE · EduSkills | Supported by Altair</p>
+
+            <div class="cert-actions">
+              <button class="view-cert" data-pdf="certificates/altair_internship.pdf">
+                View Certificate
+              </button>
+
+              <a class="download-cert" href="certificates/altair_internship.pdf" download>
+                Download
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATE MODAL -->
+    <div class="cert-modal" id="certModal">
+      <div class="cert-modal-content">
+        <button class="cert-close" aria-label="Close certificate">×</button>
+        <iframe id="certFrame"></iframe>
+      </div>
+    </div>
+
+
+    <!-- RESUME -->
+    <section id="resume" class="section fade-up">
+      <div class="container resume-container">
+        <div class="resume-card">
+          <h2>My Resume</h2>
+          <p>
+            A Data Science student with hands-on experience in data analysis,
+            machine learning, and modern data-driven applications.
+          </p>
+          <a href="resume/Suraj_Rao_Resume.pdf" download class="resume-btn">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section fade-up">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+
+        <form class="contact-form" action="https://formspree.io/f/xpqqawkv" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+          </div>
+
+          <button type="submit" class="contact-btn">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/918790172500?text=Hi%20Suraj,%20I%20saw%20your%20portfolio" class="whatsapp-float"
+    target="_blank" data-tooltip="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" title="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+
+  <script src="js/video-preloader.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,506 @@
+/* ======================================================
+   STUNNING PRELOADER - BLACK, WHITE & PURPLE
+====================================================== */
+
+#stunning-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    overflow: hidden;
+    transition: opacity 1.5s ease;
+}
+
+#stunning-preloader.active {
+    display: flex;
+}
+
+#stunning-preloader.fade-out {
+    opacity: 0;
+}
+
+/* Video Background with Purple Tint */
+.preloader-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.preloader-video-bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: hue-rotate(270deg) saturate(1.5) brightness(0.8);
+}
+
+/* Gradient Overlay for Depth */
+.preloader-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(ellipse at 20% 20%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(183, 148, 246, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at center, transparent 20%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 2;
+}
+
+/* Animated Light Rays */
+.preloader-light-rays {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.preloader-ray {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 300px;
+    background: linear-gradient(to bottom, rgba(183, 148, 246, 0.8), transparent);
+    transform-origin: bottom center;
+    animation: rayRotate 8s linear infinite;
+    opacity: 0.3;
+}
+
+.preloader-ray:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: 0s;
+}
+
+.preloader-ray:nth-child(2) {
+    transform: rotate(45deg);
+    animation-delay: -1s;
+}
+
+.preloader-ray:nth-child(3) {
+    transform: rotate(90deg);
+    animation-delay: -2s;
+}
+
+.preloader-ray:nth-child(4) {
+    transform: rotate(135deg);
+    animation-delay: -3s;
+}
+
+.preloader-ray:nth-child(5) {
+    transform: rotate(180deg);
+    animation-delay: -4s;
+}
+
+.preloader-ray:nth-child(6) {
+    transform: rotate(225deg);
+    animation-delay: -5s;
+}
+
+.preloader-ray:nth-child(7) {
+    transform: rotate(270deg);
+    animation-delay: -6s;
+}
+
+.preloader-ray:nth-child(8) {
+    transform: rotate(315deg);
+    animation-delay: -7s;
+}
+
+@keyframes rayRotate {
+    0% {
+        opacity: 0.1;
+        height: 200px;
+    }
+
+    50% {
+        opacity: 0.4;
+        height: 400px;
+    }
+
+    100% {
+        opacity: 0.1;
+        height: 200px;
+    }
+}
+
+/* Sparkle Particles */
+.preloader-sparkles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    pointer-events: none;
+}
+
+.preloader-sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #b794f6, 0 0 20px #b794f6, 0 0 30px #fff;
+    animation: sparkleAnim 2s ease-in-out infinite;
+}
+
+@keyframes sparkleAnim {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: scale(0) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1) rotate(180deg);
+    }
+}
+
+/* Main Preloader Content */
+.preloader-main-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+/* Hexagonal Loader with Glow */
+.hex-loader {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 50px;
+}
+
+.hex-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hex-ring-1 {
+    border-color: rgba(183, 148, 246, 0.8);
+    animation: hexPulse 2s ease-in-out infinite, hexSpin 4s linear infinite;
+    box-shadow: 0 0 30px rgba(183, 148, 246, 0.5), inset 0 0 30px rgba(183, 148, 246, 0.1);
+}
+
+.hex-ring-2 {
+    width: 110px;
+    height: 110px;
+    top: 20px;
+    left: 20px;
+    border-color: rgba(139, 92, 246, 0.6);
+    animation: hexPulse 2s ease-in-out infinite 0.3s, hexSpinReverse 3s linear infinite;
+}
+
+.hex-ring-3 {
+    width: 70px;
+    height: 70px;
+    top: 40px;
+    left: 40px;
+    border-color: rgba(255, 255, 255, 0.5);
+    animation: hexPulse 2s ease-in-out infinite 0.6s, hexSpin 2s linear infinite;
+}
+
+.hex-core {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 60px;
+    left: 60px;
+    background: linear-gradient(135deg, #b794f6, #8b5cf6);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    animation: corePulse 1s ease-in-out infinite;
+    box-shadow: 0 0 40px rgba(183, 148, 246, 0.8), 0 0 80px rgba(139, 92, 246, 0.5);
+}
+
+@keyframes hexSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes hexSpinReverse {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes hexPulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        filter: brightness(1);
+    }
+
+    50% {
+        opacity: 1;
+        filter: brightness(1.5);
+    }
+}
+
+@keyframes corePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 40px rgba(183, 148, 246, 0.8), 0 0 80px rgba(139, 92, 246, 0.5);
+    }
+
+    50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 60px rgba(183, 148, 246, 1), 0 0 120px rgba(139, 92, 246, 0.8);
+    }
+}
+
+/* Preloader Title */
+.preloader-title-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.preloader-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4.5rem;
+    color: #fff;
+    text-shadow:
+        0 0 20px rgba(183, 148, 246, 0.8),
+        0 0 40px rgba(183, 148, 246, 0.5),
+        0 0 60px rgba(139, 92, 246, 0.3);
+    animation: titleGlow 2s ease-in-out infinite, fadeSlideUp 1s ease forwards 0.5s;
+    opacity: 0;
+}
+
+@keyframes titleGlow {
+
+    0%,
+    100% {
+        text-shadow:
+            0 0 20px rgba(183, 148, 246, 0.8),
+            0 0 40px rgba(183, 148, 246, 0.5),
+            0 0 60px rgba(139, 92, 246, 0.3);
+    }
+
+    50% {
+        text-shadow:
+            0 0 30px rgba(183, 148, 246, 1),
+            0 0 60px rgba(183, 148, 246, 0.8),
+            0 0 100px rgba(139, 92, 246, 0.5);
+    }
+}
+
+.preloader-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: rgba(183, 148, 246, 0.9);
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    animation: fadeSlideUp 1s ease forwards 0.8s;
+    opacity: 0;
+}
+
+/* Progress Bar */
+.preloader-progress-wrapper {
+    position: relative;
+    width: 320px;
+    animation: fadeSlideUp 1s ease forwards 1s;
+    opacity: 0;
+}
+
+.preloader-progress-track {
+    height: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: visible;
+    position: relative;
+}
+
+.preloader-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #8b5cf6, #b794f6, #fff);
+    border-radius: 3px;
+    animation: progressFill 3.5s ease-in-out forwards 1.3s;
+    position: relative;
+    box-shadow: 0 0 20px rgba(183, 148, 246, 0.8);
+}
+
+.preloader-progress-orb {
+    position: absolute;
+    right: -8px;
+    top: -6px;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #b794f6, 0 0 20px #b794f6, 0 0 40px #8b5cf6;
+    animation: orbGlow 0.5s ease-in-out infinite;
+}
+
+@keyframes orbGlow {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+@keyframes progressFill {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.preloader-loading-text {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 2px;
+}
+
+.preloader-percent-value {
+    color: #b794f6;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Welcome Message */
+.preloader-welcome-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader-welcome-message.show {
+    animation: welcomeReveal 1s ease forwards;
+}
+
+.preloader-welcome-message h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    color: #fff;
+    text-shadow:
+        0 0 30px rgba(183, 148, 246, 1),
+        0 0 60px rgba(183, 148, 246, 0.7),
+        0 0 100px rgba(139, 92, 246, 0.5);
+    margin-bottom: 20px;
+}
+
+.preloader-welcome-message p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(183, 148, 246, 0.9);
+    letter-spacing: 5px;
+}
+
+@keyframes welcomeReveal {
+    0% {
+        opacity: 0;
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .preloader-title {
+        font-size: 3rem;
+    }
+
+    .hex-loader {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hex-ring-2 {
+        width: 90px;
+        height: 90px;
+        top: 15px;
+        left: 15px;
+    }
+
+    .hex-ring-3 {
+        width: 60px;
+        height: 60px;
+        top: 30px;
+        left: 30px;
+    }
+
+    .hex-core {
+        width: 24px;
+        height: 24px;
+        top: 48px;
+        left: 48px;
+    }
+
+    .preloader-progress-wrapper {
+        width: 260px;
+    }
+
+    .preloader-welcome-message h1 {
+        font-size: 3rem;
+    }
+}
