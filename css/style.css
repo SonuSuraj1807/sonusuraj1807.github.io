@@ -396,14 +396,15 @@ body.light .side-nav a.active {
   padding: 0 20px;
 }
 
+
 .section-title {
   text-align: center;
   font-size: 2.4rem;
-  margin-bottom: 50px;
+  margin: 0 auto 50px auto; /* Centered with bottom margin */
   color: var(--accent);
   position: relative;
-  display: inline-block;
-  width: 100%;
+  display: table; /* Shrink to fit content */
+  width: auto;
 
   /* Animation setup */
   opacity: 0;
@@ -429,7 +430,7 @@ body.light .side-nav a.active {
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%) scaleX(0);
-  width: 250px;
+  width: 120%; /* Relative to text width, slightly wider */
   height: 2px;
   background: linear-gradient(90deg,
       transparent 0%,
