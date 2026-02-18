@@ -55,7 +55,7 @@ I am a 21-year-old student pursuing **Data Science** at **Vignana Bharathi Insti
 
 ### 📊 GitHub Activity
 
-![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=SonuSuraj1807&theme=darkhub)
+![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=SonuSuraj1807)
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=SonuSuraj1807&show_icons=true&theme=dark&hide_border=true&cache_seconds=86400)
 
