@@ -61,6 +61,13 @@ window.portfolioData = {
             description: "A GenAI-powered system that automates online product ordering by understanding user inputs and generating responses.",
             tags: ["Python", "GenAI", "NLP"],
             link: "https://github.com/SonuSuraj1807/Automated-online-ordering-system-using-GenAI"
+        },
+        {
+            title: "Digital Library Management System",
+            image: "images/LMS.png",
+            description: "A comprehensive library management system that streamlines book issuance, return, and inventory tracking processes.",
+            tags: ["Java Script", "HTML", "CSS"],
+            link: "https://github.com/SonuSuraj1807/Digital-Library-Management"
         }
     ],
 
