@@ -55,13 +55,25 @@ I am a 21-year-old student pursuing **Data Science** at **Vignana Bharathi Insti
 
 ### 📊 GitHub Activity
 
+<<<<<<< HEAD
 ![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=SonuSuraj1807)
+=======
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=SonuSuraj1807&theme=darkhub" alt="GitHub Trophies" />
+</p>
+>>>>>>> 4dcbb51 (Attempt to resolve README visuals with centered alignment and tokyonight theme)
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=SonuSuraj1807&show_icons=true&theme=dark&hide_border=true&cache_seconds=86400)
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=SonuSuraj1807&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" />
+</p>
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=SonuSuraj1807&theme=dark&hide_border=true)
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=SonuSuraj1807&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+</p>
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=SonuSuraj1807&layout=compact&theme=dark&hide_border=true&cache_seconds=86400)
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SonuSuraj1807&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
+</p>
 
 ---
 
