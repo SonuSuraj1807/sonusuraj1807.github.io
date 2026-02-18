@@ -53,10 +53,12 @@ I am a 21-year-old student pursuing **Data Science** at **Vignana Bharathi Insti
 
 ---
 
-### 📊 GitHub Stats
+### 📊 GitHub Activity
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SonuSuraj1807&show_icons=true&theme=radical" alt="Suraj Rao's GitHub stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=SonuSuraj1807&show_icons=true&theme=tokyonight" alt="Suraj Rao's GitHub stats" />
+  <br><br>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SonuSuraj1807&layout=compact&theme=tokyonight" alt="Top Languages" />
 </p>
 
 ---
