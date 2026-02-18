@@ -55,21 +55,13 @@ I am a 21-year-old student pursuing **Data Science** at **Vignana Bharathi Insti
 
 ### 📊 GitHub Activity
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=SonuSuraj1807&theme=tokyonight" alt="GitHub Trophies" />
-</p>
+![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=SonuSuraj1807&theme=darkhub)
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SonuSuraj1807&show_icons=true&theme=radical&hide_border=true" alt="GitHub Stats" />
-</p>
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=SonuSuraj1807&show_icons=true&theme=dark&hide_border=true&cache_seconds=86400)
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=SonuSuraj1807&theme=radical&hide_border=true" alt="GitHub Streak" />
-</p>
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=SonuSuraj1807&theme=dark&hide_border=true)
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SonuSuraj1807&layout=compact&theme=radical&hide_border=true" alt="Top Languages" />
-</p>
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=SonuSuraj1807&layout=compact&theme=dark&hide_border=true&cache_seconds=86400)
 
 ---
 
